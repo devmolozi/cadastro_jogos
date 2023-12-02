@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main>
+    <form method="post">
+        <table>
+            {% csrf_token %}
+            {{ form.as_table }}
+        </table>
+        <br>
+        
+
+        <div class="delete-confirm">
+            <input class="update-post" type="submit" value="UPDATE">
+            <a class="cancelar2" href="{% url 'home' %}">Cancelar</a>
+        </div>
+    </form>
+</main>
+
+{% endblock %}

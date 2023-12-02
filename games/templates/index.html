@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main>
+{% for item in items %}
+
+
+
+
+
+<ul>
+    <li class="game_list">
+        <h3>{{ item.name }}</h3>
+        <div class="botoes">
+            <p>Ano Lançamento: {{ item.release_year }}</p>
+            <a class="edit" href="{% url 'update' pk=item.pk %}">Edit</a>
+
+            <a class="delete" href="{% url 'delete' pk=item.pk %}">Delete</a>
+        </div>
+        
+    
+    </li>
+</ul>
+{% endfor %}
+</main>
+
+{% endblock %}

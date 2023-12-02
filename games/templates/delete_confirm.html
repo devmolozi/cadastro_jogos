@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main>
+    <form method="post">{% csrf_token %}
+        <p>Tem certeza de que deseja excluir <strong>"{{ object }}"</strong>?</p>
+        {{ form }}
+        <br>
+        <br>
+
+        <div class="delete-confirm">
+        <input class="confirm" type="submit" value="Excluir">
+        <a class="cancelar" href="{% url 'home' %}">Cancelar</a>
+    </div>
+    </form>
+</main>
+
+{% endblock %}
