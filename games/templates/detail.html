@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main>
+    <ul>
+        <li class="game_list2">
+
+            <div class="foto">
+                {% if object.foto %}
+                    <img src="{{ object.foto.url }}" alt="">
+                {% endif %}
+            </div>
+
+            <div>
+
+
+            
+            <div class="name-year-detail">
+                <h1>{{ object.name }}</h1>
+                <p>{{ object.release_year }}</p>
+            </div>
+
+            <div class="descricao">
+                <p>{{ object.description }}</p>
+            </div>
+        </div>
+
+
+        </li>
+    </ul>
+</main>
+
+{% endblock %}

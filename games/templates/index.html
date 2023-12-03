@@ -5,15 +5,23 @@
 <main>
 {% for item in items %}
 
-
-
-
-
 <ul>
+
+    <a href="{% url 'view' pk=item.pk %}">
     <li class="game_list">
-        <h3>{{ item.name }}</h3>
+        <div class="pic">
+            {% if item.foto %}
+            <img src="{{ item.foto.url }}" alt="">
+        {% endif %}
+        <div class="name-year">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.release_year }}</p>
+        </div>
+        
+        </div>
+        
         <div class="botoes">
-            <p>Ano Lançamento: {{ item.release_year }}</p>
+            
             <a class="edit" href="{% url 'update' pk=item.pk %}">Edit</a>
 
             <a class="delete" href="{% url 'delete' pk=item.pk %}">Delete</a>
@@ -21,6 +29,7 @@
         
     
     </li>
+</a>
 </ul>
 {% endfor %}
 </main>
