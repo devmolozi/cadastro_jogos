@@ -3,15 +3,28 @@
 
 {% block content %}
 <main>
-    <form method="post">
-        <table>
-            {% csrf_token %}
-            {{ form.as_table }}
-        </table>
-        <br>
-        
+    <form method="post" enctype="multipart/form-data">
 
-        <div class="delete-confirm">
+        {% csrf_token %}
+
+        <label for="">Nome</label>
+        <br>
+        {{ form.name }}
+        <br>
+        <label for="">Descrição</label>
+        <br>
+        {{ form.description }}
+        <br>
+        <label for="">Ano Lançamento</label>
+        <br>
+        {{ form.release_year }}
+        <br>
+        <br>
+        {{ form.foto }}
+        <br>
+   
+
+        <div class="delete-confirm-update">
             <input class="update-post" type="submit" value="UPDATE">
             <a class="cancelar2" href="{% url 'home' %}">Cancelar</a>
         </div>

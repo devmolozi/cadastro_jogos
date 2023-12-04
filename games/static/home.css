@@ -62,70 +62,100 @@ main{
 }
 
 a.edit{
-    background-color: yellow;
+    background-color: #FFD600;
     border-radius: 5px;
     padding: 8px;
+    color: white;
 }
 
 a.delete{
     background-color: red;
     border-radius: 5px;
     padding: 8px;
+    color: white;
 }
 
-table{
-    margin: 0 auto;
-}
 
 .delete-confirm{
     margin: auto ;
     display: flex;
-    width: 15%;
+    width: 300px;
     text-align: center;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
     
 }
 
-
-
-a.cancelar{
-    background-color: green;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
+.delete-confirm-update{
+    margin: auto ;
+    display: flex;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    
 }
 
-a.cancelar2{
+.delete-confirm input{
+    cursor: pointer;
+    margin: 0;
     background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-}
-
-input.confirm{
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
     border: none;
-    color: white;
+    color: #ddd;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
 }
+
+.delete-confirm a{
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    height: 35px;
+    color: #ddd;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100px;
+}
+
+
+.delete-confirm-update input{
+    cursor: pointer;
+    margin: 0;
+    background-color: green;
+    border: none;
+    color: #ddd;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+}
+
+.delete-confirm-update a{
+    cursor: pointer;
+    background-color: yellow;
+    border: none;
+    height: 35px;
+    color: #ddd;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100px;
+}
+
+
 
 .confirm-post{
     border: 0;
     background-color: #ddd;
-    padding: 10px;
     cursor: pointer;
     border-radius: 10px;
 }
 
-.update-post{
-    border: 0;
-    background-color: green;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    color: white;
-}
 
 input{
     padding: 5px;
@@ -157,7 +187,7 @@ p{
 }
 
 .pic img{
-    width: 70px;
+    width: auto;
     height:50px;
 }
 
@@ -166,14 +196,39 @@ p{
 }
 
 .descricao{
+    
     text-align: left;
     margin-left: 30px;
     margin-top: 20px;
 }
+
+p {
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
 
 .game_list2{
     display: flex;
     justify-content: space-between;
     width: 70%;
     margin: 10px auto;
+}
+
+form {
+    width: 300px;
+    margin: auto auto;
+    text-align: left;
+}
+
+form input{
+    margin-left: 0;
+    margin-top: 10px;
+    width: 300px;
+}
+
+form textarea{
+    margin-left: 0;
+    padding: 5px;
+    margin-top: 10px;
 }

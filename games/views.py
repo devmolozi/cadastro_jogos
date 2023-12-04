@@ -16,7 +16,6 @@ class NewGame(CreateView):
     model = Game
     template_name = 'new_game.html'
     fields = ['name', 'description', 'release_year', 'foto']
-    
     success_url = reverse_lazy('home') 
 
 class GameUpdateView(UpdateView):

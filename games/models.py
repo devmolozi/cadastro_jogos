@@ -1,10 +1,10 @@
 from django.db import models
 
 class Game(models.Model):
-    name = models.CharField(max_length=100)
-    release_year = models.IntegerField('Lançamento')
-    description = models.TextField('Descrição')
-    foto = models.ImageField(upload_to='media/', blank=True, null=True)
+    name = models.CharField(max_length=255, verbose_name="Nome")
+    description = models.TextField(verbose_name="Descrição")
+    release_year = models.IntegerField(verbose_name="Ano")
+    foto = models.ImageField(upload_to='game_photos/', null=True, blank=True, verbose_name="")
 
     def __str__(self) -> str:
         return self.name

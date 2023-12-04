@@ -17,12 +17,12 @@
 
             
             <div class="name-year-detail">
-                <h1>{{ object.name }}</h1>
-                <p>{{ object.release_year }}</p>
+                <h1>{{ object.name|safe }}</h1>
+                <p>{{ object.release_year|safe }}</p>
             </div>
 
             <div class="descricao">
-                <p>{{ object.description }}</p>
+                <p>{{ object.description|safe }}</p>
             </div>
         </div>
 
